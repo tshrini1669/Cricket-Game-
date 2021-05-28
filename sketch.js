@@ -58,6 +58,11 @@ if(score===10){
   stroke("white");
   textSize(30);
   text("Hurray! You have Won the match. To play again reload the game,Thanks",20,450);
+  score.visible=0;;
+  ball.velocityX=0;
+  ball.velocityY=0;
+  bat.velocityX=0;
+  bat.velocityY=0;
 }
 if(ball.isTouching(bound4)){
   score=score-1;
@@ -84,5 +89,4 @@ text("Press Space  bar to serve the ball",500,50);
 function serveball(){
   ball.velocityY=Math.round(random(-2,3)) 
   ball.velocityX=-5
-}
-
+};
